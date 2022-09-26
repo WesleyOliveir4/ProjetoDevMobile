@@ -12,17 +12,19 @@ import com.example.orgs.model.Produto
 
 class ListaProdutosAdapter(
         private val context: Context,
-        private val produtos: List<Produto>
+        produtos: List<Produto>
 ) : RecyclerView.Adapter<ListaProdutosAdapter.ViewHolder>() {
+
+        private val produtos = produtos.toMutableList()
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         fun vincula(produto: Produto) {
-            val nome = itemView.findViewById<TextView>(R.id.nome)
+            val nome = itemView.findViewById<TextView>(R.id.nomeRecyclerView)
             nome.text = produto.nome
-            val descricao = itemView.findViewById<TextView>(R.id.descricao)
+            val descricao = itemView.findViewById<TextView>(R.id.descricaoRecyclerView)
             descricao.text = produto.descricao
-            val valor = itemView.findViewById<TextView>(R.id.valor)
+            val valor = itemView.findViewById<TextView>(R.id.valorRecyclerView)
             valor.text = produto.valor.toPlainString()
         }
 
@@ -40,5 +42,10 @@ class ListaProdutosAdapter(
     }
 
     override fun getItemCount(): Int = produtos.size
+    fun atualiza(produtos: List<Produto>) {
+        this.produtos.clear()
+        this.produtos.addAll(produtos)
+        notifyDataSetChanged()
+    }
 
 }
