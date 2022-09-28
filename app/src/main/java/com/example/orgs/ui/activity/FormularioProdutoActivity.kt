@@ -8,18 +8,25 @@ import android.widget.EditText
 import android.widget.TextView
 import com.example.orgs.R
 import com.example.orgs.dao.ProdutosDao
+import com.example.orgs.databinding.ActivityFormularioProdutoBinding
 import com.example.orgs.model.Produto
 import java.math.BigDecimal
 
-class FormularioProdutoActivity : AppCompatActivity(R.layout.activity_formulario_produto) {
+class FormularioProdutoActivity : AppCompatActivity() {
+
+    private val binding by lazy {
+        ActivityFormularioProdutoBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val campoNome = findViewById<EditText>(R.id.nome)
-        val campoDescricao = findViewById<EditText>(R.id.descricao)
-        val campoValor = findViewById<EditText>(R.id.valor)
-        val btn_BotaoSalvar = findViewById<Button>(R.id.botao_salvar)
+        setContentView(binding.root)
+
+        val campoNome = binding.nome
+        val campoDescricao = binding.descricao
+        val campoValor = binding.valor
+        val btn_BotaoSalvar = binding.botaoSalvar
 
 
 
