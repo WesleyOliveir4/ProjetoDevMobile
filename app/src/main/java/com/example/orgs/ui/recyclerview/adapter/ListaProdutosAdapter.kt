@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.orgs.R
 import com.example.orgs.model.Produto
+import java.text.NumberFormat
+import java.util.*
 
 
 class ListaProdutosAdapter(
@@ -25,7 +27,13 @@ class ListaProdutosAdapter(
             val descricao = itemView.findViewById<TextView>(R.id.descricaoRecyclerView)
             descricao.text = produto.descricao
             val valor = itemView.findViewById<TextView>(R.id.valorRecyclerView)
-            valor.text = produto.valor.toPlainString()
+            val valorEmMoeda: String = formataMoedaBrasileira(produto)
+            valor.text = valorEmMoeda
+        }
+
+        private fun formataMoedaBrasileira(produto: Produto): String {
+            val formatadorMoeda: NumberFormat = NumberFormat.getCurrencyInstance(Locale("pt", "br"))
+            return formatadorMoeda.format(produto.valor)
         }
 
     }
