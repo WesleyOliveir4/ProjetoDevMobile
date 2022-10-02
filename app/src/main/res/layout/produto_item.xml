@@ -62,7 +62,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="16dp"
         tools:text="19.99" />
-    
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
@@ -73,7 +73,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nomeRecyclerView"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        tools:srcCompat="@drawable/imagem_frutas"
+        app:srcCompat="@drawable/imagem_frutas"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
