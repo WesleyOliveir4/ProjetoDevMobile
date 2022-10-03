@@ -1,4 +1,4 @@
-package com.example.orgs.dao
+package com.example.orgs.model.dao
 
 import com.example.orgs.model.Produto
 

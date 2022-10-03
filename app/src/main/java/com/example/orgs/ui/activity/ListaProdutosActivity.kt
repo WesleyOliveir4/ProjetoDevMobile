@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.orgs.ui.recyclerview.adapter.ListaProdutosAdapter
 import com.example.orgs.R
-import com.example.orgs.dao.ProdutosDao
+import com.example.orgs.model.dao.ProdutosDao
 import com.example.orgs.databinding.ActivityFormularioProdutoBinding
 import com.example.orgs.databinding.ActivityListaProdutosBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton

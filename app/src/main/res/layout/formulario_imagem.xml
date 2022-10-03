@@ -34,7 +34,7 @@
         />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_url_img"
+        android:id="@+id/url_img"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -45,6 +45,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_text_url_img"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="URL da imagem"
