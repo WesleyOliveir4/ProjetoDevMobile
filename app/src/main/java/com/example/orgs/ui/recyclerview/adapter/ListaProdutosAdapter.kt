@@ -10,6 +10,7 @@ import coil.load
 import com.example.orgs.R
 import com.example.orgs.databinding.ActivityFormularioProdutoBinding
 import com.example.orgs.databinding.ProdutoItemBinding
+import com.example.orgs.extensoes.CarregaImagem
 import com.example.orgs.model.Produto
 import java.text.NumberFormat
 import java.util.*
@@ -33,7 +34,7 @@ class ListaProdutosAdapter(
             val valor = binding.valorRecyclerView
             val valorEmMoeda: String = formataMoedaBrasileira(produto)
             valor.text = valorEmMoeda
-            binding.imageView.load(produto.imagem)
+            binding.imageView.CarregaImagem(produto.imagem)
         }
 
         private fun formataMoedaBrasileira(produto: Produto): String {
