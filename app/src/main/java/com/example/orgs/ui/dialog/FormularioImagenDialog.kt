@@ -19,7 +19,7 @@ class FormularioImagenDialog(private val contexto: Context) {
             .setTitle("Titulo teste")
             .setMessage("Titulo mensagem")
             .setPositiveButton("Confirmar"){_, _ ->
-              val url = binding.inputTextUrlImg.text.toString()
+//              val url = binding.inputTextUrlImg.text.toString()
 //                binding.imagemFormulario.CarregaImagem(url)
             }
             .setNegativeButton("Cancelar"){_, _ ->
